@@ -1,0 +1,96 @@
+@import "./variables.css";
+
+.footer {
+
+    background-color: var(--bg-color-contatos-footer);
+
+}
+
+.footer-container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 140px;
+    align-items: center;
+    
+}
+
+.footer-texto {
+
+    font-size: 1.5rem;
+    line-height: 1.33;
+
+}
+
+.footer-contato li ,
+.footer-contato li a {
+
+    font-weight: bold;
+    font-size: 1.50rem;
+    line-height: 1.1;
+    color: var(--text-color-white);
+    margin-bottom: 20px;
+    
+}
+
+.footer-contato li a {
+
+    position: relative;
+    transition: 0.8s ease-in-out; 
+
+}
+
+.footer-contato li a:hover {
+
+    color: var(--bg-color-decoracoes-retangulo2);
+
+}
+
+.footer-contato li a::after {
+
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--bg-color-decoracoes-retangulo2);
+    bottom: -2px;
+    left: 0px;
+    transition: 0.8s ease-in-out;
+
+}
+
+.footer-contato li a:hover::after {
+
+    width: 100%;
+
+}
+
+.footer-copy {
+
+    font-size: 0.895rem;
+
+}
+
+/* ? brackpoints responsivo footer */
+
+@media screen and (max-width: 800px) {
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+    }
+
+    .footer-contato li,
+    .footer-contato li a {
+
+        font-size: 1.5rem;
+
+    }
+
+}

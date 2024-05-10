@@ -1,0 +1,259 @@
+@import "./variables.css";
+
+
+.introducao {
+
+    align-items: center;
+    padding: top;
+    position: relative;
+
+}
+
+.introducao::before {
+
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 90px;
+    background: url("../../assets/icon/decoração-triangulo-top.svg") center no-repeat;
+    top: 40px;
+    right: 40px;
+
+}
+
+
+.introducao h1 {
+
+    padding-top: 0px;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+    letter-spacing: 0.31rem;
+    color: var(--text-color-titulo_principal_intro-logo-links-menu);
+    margin-bottom: 40px;
+    position: relative;
+
+}
+
+.introducao h1::before {
+
+    position: absolute;
+    content: "";
+    width: 9.63rem;
+    height: 9.63rem;
+    background: url("../../assets/icon/detalhe.svg") center no-repeat;
+    top: -40px;
+    left: -50px;
+    z-index: -1;
+
+}
+
+.introducao p {
+
+    font-size: 1.3rem;
+    letter-spacing: 0.14rem;
+    color: var(--text-color-sutitle-intro);
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.introducao p::after {
+
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: var(--bg-color-decoracoes-retangulo2);
+    border-radius: 6px;
+    bottom: 6px;
+
+}
+
+/* ? brackpoints responsivo introdução */
+
+@media screen and (max-width: 1100px) {
+
+    .introducao h1 {
+
+        font-size: 4rem;
+
+    }
+
+}
+
+@media screen and (max-width: 1040px) {
+
+    .introducao h1 {
+
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+
+    .introducao::before {
+
+        display: none;
+
+    }
+
+} 
+
+@media screen and (max-width: 900px) {
+
+    .introducao {
+
+        gap: 100px;
+
+    }
+
+    .introducao h1 {
+
+        font-size: 3rem;
+        line-height: 3.5rem;
+
+    }
+
+    .introducao p {
+
+        font-size: 1.2rem;
+
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .introducao {
+
+        gap: 70px;
+
+    }
+
+    .introducao h1 {
+
+        font-size: 3rem;
+        line-height: 3.5rem;
+        letter-spacing: 0.10rem;
+        margin-bottom: 10px;
+
+    }
+
+    .introducao h1::before {
+
+        width: 25px;
+        height: 8px;
+        top: 0px;
+        left: 0px;
+        border-radius: 4px;
+        box-shadow: var(--bx-shadow-color-tags_cards_experiencias);
+
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+
+    .introducao {
+
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+
+    }
+
+    .introducao h1 {
+
+        font-size: 2rem;
+        line-height: 2.5rem;
+
+    } 
+    
+    .introducao p {
+
+        font-size: 1rem;
+
+
+    }
+
+}
+
+@media screen and (max-width: 604px) {
+
+    .introducao {
+        
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .introducao h1 {
+
+        font-size: 3.5rem;
+        line-height: 4rem;
+
+
+    }
+
+    .introducao h1::before {
+
+        left: 15px;
+
+    }
+
+    .introducao img {
+
+        display: none;
+
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .introducao h1 {
+
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+
+
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .introducao h1 {
+
+        font-size: 2.5rem;
+        line-height: 3rem;
+
+
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .introducao h1 {
+
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+
+
+    }
+
+    
+    .introducao h1::before {
+
+        left: 8px;
+
+    }
+
+}

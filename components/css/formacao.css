@@ -1,0 +1,272 @@
+@import "./variables.css";
+
+.formacao {
+
+    background-color: var(--bg-color-formacoes);
+    padding: 80px 0px;
+
+
+}
+
+.formacao-container {
+
+    position: relative;
+
+}
+
+.formacao-container::before {
+
+    position: absolute;
+    content: "";
+    width: 90px; 
+    height: 90px;
+    background: url("../../assets/icon/decoração-triangulo-bottom.svg") center no-repeat;
+    bottom: 55px;
+    left: 20px;
+
+}
+
+.formacao-container::after {
+
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 150px;
+    background: url("../../assets/icon/detalhe.svg") center no-repeat;
+    bottom: -150px;
+    right: 140px;
+
+}
+
+.formacao .subtitulo {
+
+    color: var(--text-color-titulo_pricipal_formacoes);
+    max-width: 5ch;
+
+}
+
+.formacao-texto {
+
+    font-size: 1.5rem;
+    line-height: 1.33;
+    max-width: 33ch;
+    margin-bottom: 60px;
+    color: var(--text-color-decriao_experiencia1);
+    padding-top: 25px;
+
+}
+
+.formacao-texto strong {
+
+    font-weight: bold;
+    color: var(--text-color-white);
+
+}
+
+.faculdade-lista {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+
+}
+
+.faculdade {
+
+    flex: 1;
+    background-color: var(--bg-color-cards-formacoes);
+    border-radius: 4px;
+    border: var(--br-color-cards_formacoes);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+}
+
+.faculdade-tipo {
+
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Playfair Display";
+    margin-bottom: 10px;
+
+}
+
+.faculdade-curso {
+
+    font-family: "Playfair Display";
+    font-size: 1.125rem;
+    line-height: 1.4;
+    letter-spacing: 1.3px;
+    color: var(--text-color-white);
+    margin-bottom: 40px;
+    position: relative;
+    flex: 1;
+
+}
+
+.faculdade-curso::before {
+
+    position: absolute;
+    content: "";
+    display: block;
+    width: 4px;
+    height: 20px;
+    background: var(--bg-color-decoracoes-retangulo-experiencia-formacoes-icones);
+    top: 4px;
+    left: -25px;
+    border-radius: 4px;
+
+}
+
+.faculdade-instituicao {
+
+    font-size: 1.125rem;
+    text-transform: uppercase;
+
+} 
+
+.cursos {
+
+    margin-bottom: 60px;
+
+}
+
+.formacao-extra h3 {
+
+    font-family: "Playfair Display";
+    font-weight: bolder;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+.formacao-extra h3::before {
+
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: 0px;
+    left: -35px;
+
+}
+
+.cursos h3::before {
+
+    background: url("../../assets/icon/icon-cursos.svg") center no-repeat;
+
+}
+
+.idiomas h3::before {
+
+    background: url("../../assets/icon/icon-idiomas.svg") center no-repeat;
+
+
+}
+
+.formacao-extra ul li {
+
+    color: var(--text-color-white);
+    font-size: 1.125rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+}
+
+.formacao-extra ul li span {
+
+    font-family: "Playfair Display";
+    font-size: 1.1rem;
+    color: var(--text-color-base);
+    padding-left: 5px;
+
+}
+
+.cursos li {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cursos ul li span {
+
+    position: relative;
+
+}
+
+.cursos ul li span::before {
+
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--bg-color-decoracoes-retangulo-experiencia-formacoes-icones);
+    border: 1px solid var(--bg-color-decoracoes-retangulo1);
+    box-shadow: var(--bx-shadow-color-tags_cards_experiencias);
+    border-radius: 50%;
+    top: 2px;
+    left: -27px;
+ 
+}
+
+.idiomas ul li span {
+
+    text-transform: uppercase;
+
+}
+
+/* ? brackpoints responsivo Formação */
+
+@media screen and (max-width: 800px) {
+
+    .formacao-container {
+
+        grid-template-columns: 1fr;
+        padding: 60px 20px;
+        gap: 40px;
+
+    }
+
+    .formacao .subtitulo {
+
+        color: var(--text-color-white);
+
+    }
+
+    .formacao .formacao-texto {
+
+        text-align: center;
+        max-width: initial;
+        font-size: 1.25rem;
+
+    }
+
+    .formacao-extra .cursos h3::before {
+
+        left: 220px;
+
+    }
+
+    .formacao-extra .idiomas h3::before {
+    
+        left: 100px;
+    
+    }
+
+    .formacao-container::before {
+
+        opacity: 0;
+    
+    }
+
+}
